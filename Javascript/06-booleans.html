@@ -66,12 +66,12 @@
   console.log('text' / 5);
 
   let variable1
-  console.log(variable1);
+  console.log(variable1); // falsy values: false 0 '' undefined null
 
   const result = 0 ? 'truthy' : 'falsy';
   console.log(result);
 
-  false && console.log('Hello');
+  false && console.log('Hello');  // gaurd operator
 
   const message = 5 && 'Hello';
   console.log(message);
