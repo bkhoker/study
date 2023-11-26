@@ -13,18 +13,14 @@
 <body>
   <script>
   
-  let hour = 14;
-  let name = "Brian";
+  let age = 45;
+  const isHoliday = false;
 
-
-  if (hour >= 6 && hour <= 12)
-    {console.log(`Good Morning ${name}`);}
-
-  else if(hour >= 13 && hour <= 17)
-    {console.log(`Good Afternoon ${name}`);}
+  if (!isHoliday && (age <= 6 || age >= 65))
+    {console.log(`Discount`);}
 
   else
-    {console.log(`Good Evening ${name}`);}
+    {console.log(`No Discount`);}
 
   </script>
 </body>
