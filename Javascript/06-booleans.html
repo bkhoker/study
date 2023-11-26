@@ -68,15 +68,18 @@
   let variable1
   console.log(variable1); // falsy values: false 0 '' undefined null
 
-  const result = 0 ? 'truthy' : 'falsy';
+
+
+  const result = 0 ? 'truthy' : 'falsy'; // TERNARY OPERATOR ?: if true = truthy, if falese = falsy
   console.log(result);
 
-  false && console.log('Hello');  // gaurd operator
+  false && console.log('Hi no');  // GUARD OPERATROR only works if first stattement is true
+                                  //other wise stops rigth side 
 
-  const message = 5 && 'Hello';
+  const message = 5 && 'Hello';  //true
   console.log(message);
 
-  const cur = undefined || 'USD';
+  const cur = undefined || 'USD'; // DEFAULT OPERATOR will stop if left side is true (needs false to continue)
   console.log(cur);
 
 
