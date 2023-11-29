@@ -29,6 +29,39 @@
 
     delete product.newProperty;
     console.log(product);
+
+    // More about objects
+
+    const pro2 ={
+      name: 'shirt',
+      'delivery-time': '1 day',
+      rating:{
+        stars: 4.5,
+        count: 87
+      },
+      fun: function fun1(){
+        console.log('function inside object');
+      }
+
+    };
+
+    console.log(pro2);
+    console.log(pro2.name);
+    console.log(pro2['name']); // lets us use properties that dont work with dot
+    console.log(pro2['delivery-time']);
+
+    console.log(pro2.rating.count);
+    pro2.fun();
+    
+    console.log(typeof console.log);
+
+    // JSON (Javascript Object Notation)
+
+    console.log(JSON.stringify(pro2));  // doesnt support functions, converts into JSON
+    
+    const jsonstring = JSON.stringify(pro2);
+    console.log(JSON.parse(jsonstring));
+    
   </script>
 </body>
 </html>
