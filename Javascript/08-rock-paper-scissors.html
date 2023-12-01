@@ -91,7 +91,7 @@ Wins: ${score.wins}, Losses ${score.losses}, Ties: ${score.ties}`)
         score.ties += 1;
       } 
 
-      localStorage.setItem('score',JSON.stringify(score));
+      localStorage.setItem('score',JSON.stringify(score)); // local storage only supports strings
 
       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
 Wins: ${score.wins}, Losses ${score.losses}, Ties: ${score.ties}`);
