@@ -52,11 +52,27 @@
     
     console.log('next line');
 
-    setInterval(function(){
+    setInterval(function(){ // fucntion keeps running everey 3 seconds
       console.log('interval');
     }, 3000);
 
     console.log('next line 2');
+
+    // new more lessons
+
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value, index){
+      if(value === 'wash dishes'){
+        return; // skips function
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+
   </script>
 </body>
 </html>
