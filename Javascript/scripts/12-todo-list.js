@@ -1,10 +1,10 @@
 const todolist = [{
   name: 'wash dishes',
-  dueDate: '2024 - 02 - 13'
+  dueDate: '2024-02-13'
 },
 {
   name: 'clean house',
-  dueDate: '2024 - 02 - 15'
+  dueDate: '2024-02-15'
 }
 ];
 
@@ -17,17 +17,27 @@ function renderTodoList(){
     const html = `
       <div>${name}</div>
       <div>${dueDate}</div>
-      <button onclick="
-        todolist.splice(${index},1);
-        renderTodoList();
-      " class="delete-todo-button">Delete</button>
+      <button class="delete-todo-button js-delete-todo-button">Delete</button>
     `;
     todoListHTML += html;
   })
 
   document.querySelector('.js-todo-list')
   .innerHTML = todoListHTML;
+
+  document.querySelectorAll('.js-delete-todo-button')
+    .forEach((deleteButton, index) => {
+      deleteButton.addEventListener('click', () => {
+        todolist.splice(index,1);
+        renderTodoList();
+      });
+    });
 }
+
+document.querySelector('.js-add-todo-button')
+  .addEventListener('click', () => {
+    addTodo();
+  });
 
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input')
