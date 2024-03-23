@@ -10,7 +10,6 @@ let isAutoPlaying = false;
 let intervalId;
 
 /*const autoPlay = () => {
-
 };*/
 function autoPlay(){
   if (!isAutoPlaying){
@@ -25,6 +24,19 @@ function autoPlay(){
     isAutoPlaying = false;
   }
 }
+
+document.querySelector('.js-rock-button') 
+  .addEventListener('click',() => {
+    playGame('rock');
+  })
+document.querySelector('.js-paper-button') 
+  .addEventListener('click',() => {
+    playGame('paper');
+  })
+document.querySelector('.js-scissors-button') 
+  .addEventListener('click',() => {
+    playGame('scissors');
+  })
 
 function playGame(playerMove){
 const compMove = pickCompMove();
