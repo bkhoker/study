@@ -1,5 +1,5 @@
 import {cart} from '../data/cart.js'; // pout all imports at top of file, need live server
-
+import {products} from '../data/products.js';
 let productsHTML = '';
 
 products.forEach((product) => {
